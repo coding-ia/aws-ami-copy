@@ -4,8 +4,8 @@ description: Copies public AWS AMI to destination account.
 runs:
   using: docker
   image: docker://ghcr.io/coding-ia/aws-ami-copy:main
-  entrypoint: 'acc'
-  post-entrypoint: 'acc_cleanup'
+  entrypoint: '/acc'
+  post-entrypoint: '/acc_cleanup'
   
 inputs:
   ami-id:
