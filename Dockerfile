@@ -19,6 +19,7 @@ RUN go build \
 
 FROM scratch
 
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=builder /bin/aac /aac
 
 ENTRYPOINT ["/aac"]
