@@ -18,7 +18,7 @@ RUN go build \
   && strip /bin/aac \
   && upx -q -9 /bin/aac
 
-FROM scratch
+FROM alpine
 
 COPY --from=builder /bin/aac /aac
 
