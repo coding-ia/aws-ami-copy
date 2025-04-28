@@ -56,7 +56,7 @@ func CopyAMI(ctx context.Context) {
 	if amiId == "" {
 		log.Fatalf("ami-id or ssm-param-ami-id is required")
 	}
-	
+
 	describeImagesInput := &ec2.DescribeImagesInput{
 		ImageIds: []string{amiId},
 	}

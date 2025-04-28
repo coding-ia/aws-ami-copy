@@ -24,8 +24,6 @@ func init() {
 func Cleanup(ctx context.Context) {
 	actions := githubactions.New()
 
-	actions.
-
 	imageId := actions.Getenv("COPIED_AMI_ID")
 	snapshotId := actions.Getenv("COPIED_AMI_SNAPSHOT_ID")
 
