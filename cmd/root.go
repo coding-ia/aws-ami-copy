@@ -33,6 +33,8 @@ func Execute() {
 func CopyAMI(ctx context.Context) {
 	actions := githubactions.New()
 
+	log.Println("Starting AMI copy process")
+
 	amiId := actions.GetInput("ami-id")
 	ssmParamAMIId := actions.GetInput("ssm-param-ami-id")
 	awsRegion := actions.GetInput("aws-region")
